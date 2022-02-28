@@ -1,13 +1,16 @@
-import { useState } from 'react';
-import './App.css';
+import { useState, useEffect } from "react";
+import './App.css'
 import Card from './components/Profile-card';
 
 function App() {
   const [data, setData] = useState(null);
-  fetch("https://api.github.com/users")
+  
+  useEffect(() => {
+    fetch("https://api.github.com/users")
       .then((res) => res.json())
       .then((data) => setData(data));
-
+  }, []);
+  
   return (
     <>
       {data &&
