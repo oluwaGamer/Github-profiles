@@ -1,15 +1,14 @@
 import "./Profile-card.css"
 
 
-function Card({profile}) {
+function Card({profile}) { 
     return (
         <>
             <div className="card">
                 <img src={profile.avatar_url} className="img" />
                 <h1>{profile.login.toUpperCase()}</h1>
                 <p className="title">Developer</p>
-                <p className="">Check out my github profile <a href={profile.html_url}>HERE</a></p>
-                
+                <a href={profile.html_url}><i class="fa fa-github"></i></a>
             </div>
         </>
     );

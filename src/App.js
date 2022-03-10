@@ -16,7 +16,7 @@ function App() {
       {data &&
         data.map((item) => {
           return  <>
-                    <Card key={item.id} profile={item}/>
+                    <Card key={item.id} profile={item} className=""/>
                   </>
           }
         )}
